@@ -1,0 +1,49 @@
+{
+  "model": "opus[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/block-git-write.sh\"",
+            "if": "Bash(git *)",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$HOME/.claude/hooks/task-observer-activation.sh\"",
+            "timeout": 15,
+            "statusMessage": "Activando task-observer..."
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/repo-verify.sh\"",
+            "timeout": 15,
+            "statusMessage": "Verificando repositorio..."
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "claude-mem@thedotmack": true,
+    "warp@claude-code-warp": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    }
+  },
+  "theme": "dark-daltonized"
+}
