@@ -144,7 +144,7 @@ directorio `observation-log/` sigue vacío, la activación nunca ocurrió.
   Solo enruta la CLI de terminal; Desktop sobrescribe `ANTHROPIC_BASE_URL` y no
   pasa por él. Se corre `headroom learn` a mano cuando se repite un mismo error
   entre sesiones, tras un refactor grande, o una vez al mes.
-- **claude-mem** — plugin de memoria, se instala desde su marketplace.
+- **claude-mem** — plugin de memoria.
 - **Memorias y observaciones** — son contenido, no configuración, y algunas
   tienen contexto de trabajo. Se quedan en la máquina.
 
