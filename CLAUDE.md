@@ -45,13 +45,19 @@ Antes de cualquier comando que pueda descartar trabajo, verificá `git status` p
 
 ## Aprendizaje
 
-Antes del primer tool call de cualquier sesión — y antes de escribir o proponer
-un plan, no solo antes de ejecutarlo — invocá la skill `task-observer` Y ejecutá
-su Session Start Protocol (chequeo de storage, scan de frontmatter, trigger de
-revisión). Cargar la skill y correr el protocolo son pasos distintos: una sesión
-que carga el archivo y se detiene no activó nada. Cualquier turno que vaya a usar
-una herramienta cuenta; no clasifiques la sesión como "demasiado simple" por su
-mensaje de apertura.
+Invocá la skill `task-observer` Y ejecutá su Session Start Protocol (chequeo de
+storage, scan de frontmatter, trigger de revisión) cuando la sesión vaya a
+involucrar trabajo de varios pasos: implementar, refactorizar, depurar, o
+cualquier tarea donde vayas a tocar código o tomar decisiones de diseño.
+Cargar la skill y correr el protocolo son pasos distintos: una sesión que carga
+el archivo y se detiene no activó nada.
+
+No lo cargues para una consulta puntual, una lectura, una pregunta de una
+respuesta o un pedido de una sola línea — pesa ~11.600 tokens de línea de base
+que se reenvían en cada tool call de la sesión, y en una tarea chica ese costo
+supera lo que se podría llegar a capturar. Si a mitad de una sesión "chica" el
+pedido escala a trabajo real, cargalo en ese momento — no hace falta haberlo
+anticipado desde el mensaje de apertura.
 
 Elegí las skills por la DECISIÓN que el pedido involucra, no por el artefacto en
 que llegó. Nombrá qué está decidiendo el usuario y recién ahí matcheá contra las
