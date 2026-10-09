@@ -75,12 +75,15 @@ por el período de gracia) y avisa si la revisión está vencida.
 
 ## Las skills
 
-Cuatro propias, en `skills/`:
+Cinco propias, en `skills/`:
 
 - **`planning`** — metodología de planes antes de tocar código.
 - **`dev-standards`** — SOLID y reglas de testing.
 - **`execution-harness`** — ciclo de vida de ejecución.
 - **`documentation`** — estado de sesión, README, auditoría de versiones.
+- **`agy-orchestration`** — delegación de tareas al CLI de Antigravity con
+  límites de permisos y verificación independiente de calidad antes de aceptar
+  sus resultados.
 
 ### Dependencia externa: `task-observer`
 

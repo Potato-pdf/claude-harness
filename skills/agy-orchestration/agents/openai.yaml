@@ -1,0 +1,6 @@
+interface:
+  display_name: "AGY Orchestration"
+  short_description: "Delegate AGY work with quality gates"
+  default_prompt: "Use $agy-orchestration to delegate and verify a scoped task."
+policy:
+  allow_implicit_invocation: true
