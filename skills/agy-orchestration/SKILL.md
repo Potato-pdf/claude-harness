@@ -59,6 +59,11 @@ request the required approval or use a different permitted execution path.
 Do not accept AGY output until the parent agent independently performs the
 checks that fit the deliverable:
 
+- **Executable changes:** invoke `qa-test-gate` and complete its unit,
+  integration, static, and smoke matrix on the final integrated tree. If the
+  skill is unavailable, stop and report the missing gate instead of accepting
+  AGY's test claims as a substitute.
+
 - **Requirements:** map every acceptance criterion to direct evidence; label
   anything without evidence as unverified.
 - **Code:** inspect the diff, run the relevant tests and static checks, check

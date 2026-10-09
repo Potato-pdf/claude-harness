@@ -7,6 +7,7 @@ Reglas permanentes para todo trabajo de código. No son sugerencias.
 Antes de escribir código, invocá la skill `planning` y acordá el plan.
 Durante la implementación, seguí el ciclo de `execution-harness`.
 Al tocar arquitectura o tests, aplicá `dev-standards`.
+Para todo cambio de comportamiento, invocá `qa-test-gate` y completá su matriz.
 Al cerrar, actualizá lo que corresponda según `documentation`.
 
 Si una tarea es trivial (una línea, un typo), no hace falta el ciclo completo — pero decilo explícitamente en vez de saltearlo en silencio.
@@ -22,8 +23,10 @@ de meter el parche.
 
 ## Testing
 
-Todo cambio de comportamiento va acompañado de pruebas unitarias. Corré la suite
-antes de reportar el trabajo como terminado.
+Todo cambio de comportamiento pasa por `qa-test-gate`: crear y ejecutar pruebas
+unitarias, de integración, estáticas y de humo. Cada nivel debe quedar como
+`PASSED`, `FAILED`, `BLOCKED` o `NOT APPLICABLE`, con evidencia o motivo; nunca
+se omite en silencio.
 
 Si no podés correr los tests (falta entorno, credenciales, servicio externo),
 decilo explícitamente — nunca declares que algo funciona sin haberlo verificado.

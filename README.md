@@ -31,8 +31,9 @@ Aplica a Claude Desktop y a la CLI, porque está a nivel usuario.
   durante, `dev-standards` al tocar arquitectura o tests, `documentation` al cerrar.
 - **Arquitectura** — SOLID, y evaluar al menos dos opciones de diseño antes de
   implementar. Nada de regresiones arquitectónicas para salir del paso.
-- **Testing** — pruebas unitarias en todo cambio de comportamiento. Si no se
-  pueden correr, decirlo; nunca declarar que algo funciona sin verificarlo.
+- **Testing** — `qa-test-gate` exige una matriz de pruebas unitarias, de
+  integración, estáticas y de humo. Si un nivel no se puede correr, se registra
+  como bloqueado; nunca se declara que algo funciona sin verificarlo.
 - **Control de versiones** — no crear commits ni hacer push. Nunca. Yo reviso y
   commiteo a mano.
 - **Verificación de repo** — mirar el estado real antes de asumir nada.
@@ -75,7 +76,7 @@ por el período de gracia) y avisa si la revisión está vencida.
 
 ## Las skills
 
-Cinco propias, en `skills/`:
+Seis propias, en `skills/`:
 
 - **`planning`** — metodología de planes antes de tocar código.
 - **`dev-standards`** — SOLID y reglas de testing.
@@ -84,6 +85,8 @@ Cinco propias, en `skills/`:
 - **`agy-orchestration`** — delegación de tareas al CLI de Antigravity con
   límites de permisos y verificación independiente de calidad antes de aceptar
   sus resultados.
+- **`qa-test-gate`** — gate de QA que planifica, crea, ejecuta y reporta pruebas
+  unitarias, de integración, estáticas y de humo para cada cambio ejecutable.
 
 ### Dependencia externa: `task-observer`
 

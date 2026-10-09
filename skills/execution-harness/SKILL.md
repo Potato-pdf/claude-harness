@@ -34,6 +34,7 @@ lifecycle:
     steps:
       - "Ejecutar las tareas planificadas aplicando los estándares de desarrollo y testing."
       - "Modificar o escribir el código garantizando que las pruebas automatizadas pasen exitosamente."
+      - "Para todo cambio de comportamiento, invocar `qa-test-gate` y completar o bloquear explícitamente sus niveles unitario, integración, estático y humo antes del cierre."
 
   phase_4_session_close:
     name: "Cierre de Sesión (Persistencia de Contexto)"
